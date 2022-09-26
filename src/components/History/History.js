@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setHistory, clearHistory } from '../../store/actions';
+import { clearHistory } from '../../store/actions';
 
 import Icon from '../Icon';
 import emptyImage from '../../assets/empty.png';
@@ -50,15 +50,12 @@ const History = ({ history, clearHistory, handleToggleHistory }) => {
 const mapStateToProps = (state) => {
   return {
     history: state.globalState.history,
-    translatedText: state.globalState.translatedText,
-    textToBeTranslated: state.globalState.textToBeTranslated,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     clearHistory: () => dispatch(clearHistory()),
-    setHistory: (item) => dispatch(setHistory(item)),
   };
 };
 
