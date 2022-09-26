@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 80px;
+  position: relative;
+
+  img {
+    width: 200px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 20px 10px;
+  }
+}

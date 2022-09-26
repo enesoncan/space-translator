@@ -1,0 +1,83 @@
+@import '../../styles/vars.scss';
+
+.home {
+  display: flex;
+
+  &__content {
+    width: 100%;
+    position: relative;
+  }
+
+  &__buttons {
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    margin-top: 70px;
+    position: relative;
+    justify-content: center;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+
+      button {
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        background-color: $color-gray;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: $color-black;
+        }
+      }
+
+      span {
+        font-size: 13px;
+        color: $color-black;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      &__active {
+        background-color: $color-light-blue !important;
+
+        svg {
+          fill: $color-primary !important;
+        }
+      }
+    }
+  }
+
+  &__modal {
+    width: 30%;
+    height: 100vh;
+    min-width: 30%;
+    position: relative;
+    background-color: $color-white;
+
+    @media only screen and (max-width: 1200px) {
+      top: 0;
+      right: 0;
+      width: 40%;
+      position: fixed;
+    }
+
+    @media only screen and (max-width: 992px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-bottom: 50px;
+  }
+}
