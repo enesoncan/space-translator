@@ -19,19 +19,21 @@ const History = ({ history, clearHistory, handleToggleHistory }) => {
 
       {history.length ? (
         <div className={styles.history__items}>
-          {history.map((item, idx) => {
-            const { sourceText, targetText } = item;
+          {history
+            .map((item, idx) => {
+              const { sourceText, targetText } = item;
 
-            return (
-              <div className={styles.history__items__item} key={idx * 10}>
-                <span>
-                  English <Icon name="arrow" /> Turkish Machine
-                </span>
-                <p>{sourceText}</p>
-                <p>{targetText}</p>
-              </div>
-            );
-          })}
+              return (
+                <div className={styles.history__items__item} key={idx * 10}>
+                  <span>
+                    English <Icon name="arrow" /> Turkish Machine
+                  </span>
+                  <p>{sourceText}</p>
+                  <p>{targetText}</p>
+                </div>
+              );
+            })
+            .reverse()}
 
           <div className={styles.history__items__clear}>
             <button onClick={() => clearHistory()}>Clear History</button>

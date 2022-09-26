@@ -1,11 +1,19 @@
-In the project directory, you can run:
+### `How to launch the project 🏁`
 
-### `npm start`
+Install Node.js and then open the Terminal/CMD and navigate to the project's folder. Run the following command:
+
+`npm install`
+
+### `Development Environment`
+
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run build`
+### `Production Build`
+
+`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
