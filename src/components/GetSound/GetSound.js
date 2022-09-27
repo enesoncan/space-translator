@@ -22,9 +22,9 @@ const GetSound = ({ setTextToBeTranslated }) => {
   }, [isListening]);
 
   const handleListen = () => {
-    setTextToBeTranslated('');
-
     if (isListening) {
+      setTextToBeTranslated('');
+
       mic.start();
       mic.onend = () => {
         mic.start();
