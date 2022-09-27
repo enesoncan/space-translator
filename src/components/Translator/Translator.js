@@ -36,6 +36,15 @@ const Translator = ({
             onChange={(event) => handleTranslate(event)}
             className={styles.translator__wrapper__input__box}
           ></textarea>
+
+          {textToBeTranslated ? (
+            <button
+              className={styles.translator__wrapper__input__delete}
+              onClick={() => setTextToBeTranslated('')}
+            >
+              <Icon name="close" />
+            </button>
+          ) : null}
         </div>
 
         <div className={styles.translator__wrapper__icon}>

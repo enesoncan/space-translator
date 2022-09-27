@@ -16,6 +16,7 @@
     &__result {
       width: 48%;
       display: flex;
+      position: relative;
       flex-direction: column;
 
       &__box {
@@ -45,6 +46,30 @@
         resize: none;
         border: none;
         outline: none;
+      }
+
+      &__delete {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 65px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9;
+        border: none;
+        transition: 250ms;
+        border-radius: 50%;
+        background-color: transparent;
+
+        &:hover {
+          background-color: #efefef;
+        }
+
+        svg {
+          fill: $color-black;
+        }
       }
     }
 
