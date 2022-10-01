@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ReactComponent as ArrowRight } from '../../assets/arrow.svg';
-import { ReactComponent as Microphone } from '../../assets/microphone.svg';
-import { ReactComponent as History } from '../../assets/history.svg';
-import { ReactComponent as Stop } from '../../assets/stop.svg';
-import { ReactComponent as Close } from '../../assets/close.svg';
+import { ReactComponent as ArrowRight } from '../../assets/icons/arrow.svg';
+import { ReactComponent as Microphone } from '../../assets/icons/microphone.svg';
+import { ReactComponent as History } from '../../assets/icons/history.svg';
+import { ReactComponent as Stop } from '../../assets/icons/stop.svg';
+import { ReactComponent as Close } from '../../assets/icons/close.svg';
 
 const iconTypes = {
   arrow: ArrowRight,
