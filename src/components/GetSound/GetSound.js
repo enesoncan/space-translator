@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { setTextToBeTranslated } from 'store/actions';
 
-import Icon from '../Icon';
+import Icon from 'components/Icon';
 
 import styles from './GetSound.module.scss';
 
