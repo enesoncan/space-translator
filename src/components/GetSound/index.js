@@ -1,3 +1,1 @@
-import GetSound from './GetSound';
-
-export default GetSound;
+export { default } from './GetSound';

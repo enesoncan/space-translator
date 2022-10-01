@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearHistory } from 'store/actions';
 
-import Icon from '../Icon';
+import Icon from 'components/Icon';
 import emptyImage from 'assets/images/empty.png';
 
 import styles from './History.module.scss';

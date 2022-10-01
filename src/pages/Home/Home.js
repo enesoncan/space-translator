@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getTranslatedText, setHistory } from 'store/actions';
 
 import useDebounce from 'hooks/useDebounce';
-
-import Icon from 'components/Icon';
-import Header from 'components/Header';
-import History from 'components/History';
-import GetSound from 'components/GetSound';
-import Translator from 'components/Translator';
+import { getTranslatedText, setHistory } from 'store/actions';
+import { Icon, Header, History, GetSound, Translator } from 'components';
 
 import styles from './Home.module.scss';
 
