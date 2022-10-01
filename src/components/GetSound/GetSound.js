@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setTextToBeTranslated } from '../../store/actions';
+import { setTextToBeTranslated } from 'store/actions';
 
 import Icon from '../Icon';
 
