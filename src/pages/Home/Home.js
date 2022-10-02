@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 
 import useDebounce from 'hooks/useDebounce';
@@ -13,21 +14,18 @@ const Home = ({ setHistory, getTranslatedText, textToBeTranslated }) => {
 
   useEffect(() => {
     if (debouncedSearchTerm) {
-      fetch(
-        `https://translation.googleapis.com/language/translate/v2?key=${process.env.REACT_APP_TRANSLATE_API_KEY}`,
-        {
-          method: 'POST',
-          body: JSON.stringify({
+      axios
+        .post(
+          `https://translation.googleapis.com/language/translate/v2?key=${process.env.REACT_APP_TRANSLATE_API_KEY}`,
+          {
             q: debouncedSearchTerm,
             source: 'en',
             target: 'tr',
-          }),
-          headers: { 'Content-Type': 'application/json' },
-        }
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          const translatedText = result.data.translations[0].translatedText;
+          }
+        )
+        .then((response) => {
+          const translatedText =
+            response.data.data.translations[0].translatedText;
 
           const historyItem = {
             sourceText: debouncedSearchTerm,
@@ -36,6 +34,9 @@ const Home = ({ setHistory, getTranslatedText, textToBeTranslated }) => {
 
           setHistory(historyItem);
           getTranslatedText(translatedText);
+        })
+        .catch(function (error) {
+          console.error(error.message);
         });
     }
 
